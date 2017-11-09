@@ -2,13 +2,12 @@ var QUnit = require("steal-qunit");
 var canSymbol = require("can-symbol");
 var canReflect = require("can-reflect");
 
-module.exports = function(name, Type) {
+module.exports = function(name, makeType) {
 
     QUnit.test(name+" canReflect.onInstancePatches", function(){
-
-
-        canReflect.defineInstanceKey(Type, "first", {});
-        canReflect.defineInstanceKey(Type, "last", {});
+        var Type = makeType();
+        Type[canSymbol.for("can.defineInstanceKey")]("first", {});
+        Type[canSymbol.for("can.defineInstanceKey")]("last", {});
 
 
         var calls = [];

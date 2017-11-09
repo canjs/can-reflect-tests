@@ -6,7 +6,7 @@ module.exports = function(name, makeType) {
 
     QUnit.test(name+" canReflect.onInstanceBoundChange", function(){
         var Type = makeType();
-        canReflect.defineInstanceKey(Type, "prop", {});
+        Type[canSymbol.for("can.defineInstanceKey")]( "prop", {});
 
         var calls = [];
         function handler(obj, patches) {
