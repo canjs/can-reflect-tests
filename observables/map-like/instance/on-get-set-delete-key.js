@@ -7,9 +7,12 @@ module.exports = function(name, makeInstance) {
         var instance = makeInstance();
 
         var onKeyValues = [];
+        QUnit.notOk( canReflect.isBound(instance), "not bound");
         canReflect.onKeyValue(instance,"prop",function(value){
             onKeyValues.push(value);
         });
+
+        QUnit.ok( canReflect.isBound(instance), "bound");
 
         canReflect.setKeyValue(instance,"prop", "FIRST");
         canReflect.getOwnKeys(instance,["prop"], ".getOwnKeys has set prop");
