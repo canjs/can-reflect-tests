@@ -6,7 +6,7 @@ module.exports = function(name, makeType) {
 
     QUnit.test(name+" canReflect.onInstanceBoundChange", function(){
         var Type = makeType();
-        Type[canSymbol.for("can.defineInstanceKey")]( "prop", {});
+        Type[canSymbol.for("can.defineInstanceKey")]( "prop", {configurable: true, writable: true, enumerable: true});
 
         var calls = [];
         function handler(obj, patches) {
@@ -17,12 +17,12 @@ module.exports = function(name, makeType) {
 
         var instance = new Type({prop: "value"});
         var bindHandler = function(){};
-        instance.on("prop", bindHandler);
-        instance.off("prop", bindHandler);
+        canReflect.onKeyValue(instance, "prop", bindHandler);
+        canReflect.offKeyValue(instance, "prop", bindHandler);
 
         Type[canSymbol.for("can.offInstanceBoundChange")](handler);
-        instance.on("prop", bindHandler);
-        instance.off("prop", bindHandler);
+        canReflect.onKeyValue(instance, "prop", bindHandler);
+        canReflect.offKeyValue(instance, "prop", bindHandler);
 
         QUnit.deepEqual(calls,[
             [instance,  true ],

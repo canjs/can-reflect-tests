@@ -6,7 +6,7 @@ module.exports = function(name, makeType) {
 
     QUnit.test(name+" canReflect.defineInstanceKey", function(){
         var Type = makeType();
-    	Type[canSymbol.for("can.defineInstanceKey")]("prop", {value: 0});
+    	Type[canSymbol.for("can.defineInstanceKey")]("prop", {value: 0, configurable: true, writable: true, enumerable: true});
 
 
 
