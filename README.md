@@ -10,7 +10,7 @@ tests for can-reflect types
 
 With StealJS, you can import this module directly in a template that is autorendered:
 
-```js
+```javascript
 import plugin from 'can-reflect-tests';
 ```
 
@@ -19,8 +19,8 @@ import plugin from 'can-reflect-tests';
 Use `require` to load `can-reflect-tests` and everything else
 needed to create a template that uses `can-reflect-tests`:
 
-```js
-var plugin = require("can-reflect-tests");
+```javascript
+import plugin from "can-reflect-tests";
 ```
 
 ### Standalone use
