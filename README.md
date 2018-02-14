@@ -11,7 +11,7 @@ tests for can-reflect types
 With StealJS, you can import this module directly in a template that is autorendered:
 
 ```js
-import plugin from 'can-reflect-tests';
+import plugin from "can-reflect-tests";
 ```
 
 ### CommonJS use
