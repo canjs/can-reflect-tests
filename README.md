@@ -1,32 +1,28 @@
 # can-reflect-tests
 
-[![Build Status](https://travis-ci.org/canjs/can-reflect-tests.svg?branch=master)](https://travis-ci.org/canjs/can-reflect-tests)
+[![Join our Slack](https://img.shields.io/badge/slack-join%20chat-611f69.svg)](https://www.bitovi.com/community/slack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join our Discourse](https://img.shields.io/discourse/https/forums.bitovi.com/posts.svg)](https://forums.bitovi.com/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-reflect-tests/blob/master/LICENSE)
+[![npm version](https://badge.fury.io/js/can-reflect-tests.svg)](https://www.npmjs.com/package/can-reflect-tests)
+[![Travis build status](https://travis-ci.org/canjs/can-reflect-tests.svg?branch=master)](https://travis-ci.org/canjs/can-reflect-tests)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-reflect-tests?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-reflect-tests)
+[![Coverage status](https://coveralls.io/repos/github/canjs/can-reflect-tests/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-reflect-tests?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-reflect-tests.svg)](https://greenkeeper.io/)
 
 tests for can-reflect types
 
-## Usage
+## Documentation
 
-### ES6 use
+Read the [can-reflect-tests API docs on CanJS.com](https://canjs.com/doc/can-reflect-tests.html).
 
-With StealJS, you can import this module directly in a template that is autorendered:
+## Changelog
 
-```js
-import plugin from "can-reflect-tests";
-```
+See the [latest releases on GitHub](https://github.com/canjs/can-reflect-tests/releases).
 
-### CommonJS use
+## Contributing
 
-Use `require` to load `can-reflect-tests` and everything else
-needed to create a template that uses `can-reflect-tests`:
+The [contribution guide](https://github.com/canjs/can-reflect-tests/blob/master/CONTRIBUTING.md) has information on getting help, reporting bugs, developing locally, and more.
 
-```js
-import plugin from "can-reflect-tests";
-```
+## License
 
-### Standalone use
-
-Load the `global` version of the plugin:
-
-```html
-<script src='./node_modules/can-reflect-tests/dist/global/can-reflect-tests.js'></script>
-```
+[MIT](https://github.com/canjs/can-reflect-tests/blob/master/LICENSE)
