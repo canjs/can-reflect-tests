@@ -5,15 +5,9 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-reflect-tests/blob/master/LICENSE)
 [![npm version](https://badge.fury.io/js/can-reflect-tests.svg)](https://www.npmjs.com/package/can-reflect-tests)
 [![Travis build status](https://travis-ci.org/canjs/can-reflect-tests.svg?branch=master)](https://travis-ci.org/canjs/can-reflect-tests)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-reflect-tests?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-reflect-tests)
-[![Coverage status](https://coveralls.io/repos/github/canjs/can-reflect-tests/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-reflect-tests?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-reflect-tests.svg)](https://greenkeeper.io/)
 
 tests for can-reflect types
-
-## Documentation
-
-Read the [can-reflect-tests API docs on CanJS.com](https://canjs.com/doc/can-reflect-tests.html).
 
 ## Changelog
 
