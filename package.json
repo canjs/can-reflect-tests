@@ -42,7 +42,7 @@
   "dependencies": {
     "can-reflect": "^1.7.3",
     "can-symbol": "^1.4.2",
-    "steal-qunit": "^1.0.1"
+    "steal-qunit": "^2.0.0"
   },
   "devDependencies": {
     "jshint": "^2.9.1",
