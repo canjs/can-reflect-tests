@@ -4,7 +4,7 @@ var canReflect = require("can-reflect");
 
 module.exports = function(name, makeType) {
 
-    QUnit.test(name+" canReflect.onInstancePatches", function(){
+    QUnit.test(name+" canReflect.onInstancePatches", function(assert){
         var Type = makeType();
         Type[canSymbol.for("can.defineInstanceKey")]("first", {configurable: true, writable: true, enumerable: true});
         Type[canSymbol.for("can.defineInstanceKey")]("last", {configurable: true, writable: true, enumerable: true});
@@ -30,7 +30,7 @@ module.exports = function(name, makeType) {
         canReflect.setKeyValue(instance, "last", "Mayer");
         canReflect.setKeyValue(instance, "middle", "P");
 
-        QUnit.deepEqual(calls,[
+        assert.deepEqual(calls,[
             [instance,  [{type: "set",    key: "first", value: "Payal"} ] ],
             [instance, [{type: "set",    key: "last", value: "Shah"} ] ],
             [instance, [{type: "set",    key: "middle", value: "p"} ] ]

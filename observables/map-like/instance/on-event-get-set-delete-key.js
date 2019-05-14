@@ -3,27 +3,27 @@ var canReflect = require("can-reflect");
 
 module.exports = function(name, makeInstance) {
 
-    QUnit.test(name+" onEvent, setKeyValue, getKeyValue, deleteKeyValue, getOwnKeys", function(){
+    QUnit.test(name+" onEvent, setKeyValue, getKeyValue, deleteKeyValue, getOwnKeys", function(assert){
         var instance = makeInstance();
 
         var events = [];
-        QUnit.notOk( canReflect.isBound(instance), "not bound");
+        assert.notOk( canReflect.isBound(instance), "not bound");
         canReflect.onEvent(instance,"prop",function(event){
             events.push(event);
         });
 
-        QUnit.ok( canReflect.isBound(instance), "bound");
+        assert.ok( canReflect.isBound(instance), "bound");
 
         canReflect.setKeyValue(instance,"prop", "FIRST");
         canReflect.getOwnKeys(instance,["prop"], ".getOwnKeys has set prop");
 
-        QUnit.equal( canReflect.getKeyValue(instance,"prop"), "FIRST", ".getKeyValue");
+        assert.equal( canReflect.getKeyValue(instance,"prop"), "FIRST", ".getKeyValue");
 
         canReflect.deleteKeyValue(instance,"prop");
 
-        QUnit.equal( canReflect.getKeyValue(instance,"prop"), undefined, ".deleteKeyValue made it undefined");
+        assert.equal( canReflect.getKeyValue(instance,"prop"), undefined, ".deleteKeyValue made it undefined");
 
-        QUnit.deepEqual(
+        assert.deepEqual(
 			events.map(function(event){
 				return {
 					action: event.action,
@@ -39,7 +39,7 @@ module.exports = function(name, makeInstance) {
 			],
 			"onEvent");
 
-        QUnit.deepEqual( canReflect.getOwnEnumerableKeys(instance) , [], ".getOwnKeys loses deleted prop");
+        assert.deepEqual( canReflect.getOwnEnumerableKeys(instance) , [], ".getOwnKeys loses deleted prop");
     });
 
 };
