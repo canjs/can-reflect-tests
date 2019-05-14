@@ -4,7 +4,7 @@ var canReflect = require("can-reflect");
 
 module.exports = function(name, makeType) {
 
-    QUnit.test(name+" canRelect.onInstancePatches with splice", function(){
+    QUnit.test(name+" canReflect.onInstancePatches with splice", function(assert){
         var Type = makeType();
 
         var calls = [];
@@ -20,7 +20,7 @@ module.exports = function(name, makeType) {
         Type[canSymbol.for("can.offInstancePatches")](handler);
         list.splice(3,0,4);
 
-        QUnit.deepEqual(calls,[
+        assert.deepEqual(calls,[
             [list,  [{type: "splice", index: 2, deleteCount: 0, insert: [3]} ] ]
         ]);
     });
