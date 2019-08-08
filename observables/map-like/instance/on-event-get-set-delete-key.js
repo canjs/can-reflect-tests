@@ -27,15 +27,15 @@ module.exports = function(name, makeInstance) {
 			events.map(function(event){
 				return {
 					action: event.action,
-					newValue: event.newValue,
+					value: event.value,
 					oldValue: event.oldValue,
 					key: event.key,
 					target: instance
 				};
 			}),
 			[
-				{action: "add", newValue: "FIRST", oldValue: undefined, key: "prop", target: instance},
-				{action: "delete", newValue: undefined, oldValue: "FIRST", key: "prop", target: instance}
+				{action: "add", value: "FIRST", oldValue: undefined, key: "prop", target: instance},
+				{action: "delete", value: undefined, oldValue: "FIRST", key: "prop", target: instance}
 			],
 			"onEvent");
 
